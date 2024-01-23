@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style >
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <style>
+
         body {
-            background-image: url(https://github.com/yzjbabosa/yzjbabosa.github.io/blob/main/aa.jpg?raw=true) ;
+            background-image: url(https://github.com/yzjbabosa/yzjbabosa.github.io/blob/main/aa.jpg?raw=true);
             background-repeat: no-repeat;
-            
             background-position: center center;
         }
+
         .snowflake {
             position: absolute;
             top: 0;
@@ -19,9 +23,9 @@
             filter: blur(1px);
             animation: fall linear infinite;
         }
-        audio{
+
+        audio {
             display:;
-            
         }
 
         @keyframes fall {
@@ -32,11 +36,11 @@
     </style>
 </head>
 <body>
-    
-    <audio autoplay loop>
-        <source src="http://music.163.com/song/media/outer/url?id=1851228561.mp3" type="audio/mpeg">
-    </audio>
+    <a href="music.html">音乐</a>
 
+    <audio id="musicplayer" autoplay>
+        <source src="http://music.163.com/song/media/outer/url?id=1851228561.mp3" />
+    </audio>
 
 
     <div id="snowflakes"></div>
@@ -53,7 +57,7 @@
         }
 
     </script>
-    
+
 
 
 </body>
