@@ -2,7 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+
+    <title>
+        春风十里桃花
+    </title>
+
+    <audio preload autoplay loop id="music">
+        <source src="music.html" type="audio/mpeg">
+    </audio>
 
     <style>
 
@@ -33,22 +40,15 @@
                 transform: translateY(100vh);
             }
         }
-        <style>
-    .hidden {
-        display: none;
-    }
-  </style>
+    </style>
 </head>
 <body>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
-<a href="music.html" >音乐</a>
-    <audio id="musicplayer" autoplay>
-        <source src="http://music.163.com/song/media/outer/url?id=1851228561.mp3" />
-    </audio>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 
+    <div id="snowflakes">
 
-    <div id="snowflakes"></div>
-    <script>
+    </div>
+    <script >
         const snowflakesContainer = document.getElementById('snowflakes');
         const numberOfSnowflakes = 100;
         for (let i = 0; i < numberOfSnowflakes; i++) {
@@ -59,7 +59,17 @@
             snowflake.style.animationDelay = `${Math.random() * 5}s`;
             snowflakesContainer.appendChild(snowflake);
         }
+        window.onload = function () {
+            setInterval("toggleSound()", 1);
+        }
 
+        function toggleSound() {
+            var music = document.getElementById("music");//获取ID  
+            if (music.paused) { //判读是否播放  
+                music.paused = false;
+                music.play(); //没有就播放 
+            }
+        }
     </script>
 
 
