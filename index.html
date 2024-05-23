@@ -85,8 +85,10 @@
     <script>
         function huiche() {
             document.onkeydown = function (e) {
-                if ((e || event).keyCode == 13 && document.getElementById("password").value == "傻逼")
+                if ((e || event).keyCode == 13 && document.getElementById("password").value == "草泥马")
                     window.location.href = 'music.html';
+                else if ((e || event).keyCode == 13 && document.getElementById("password").value == "傻逼")
+                    window.location.href = 'music.html';  
                 else if ((e || event).keyCode == 13 && document.getElementById("password").value == "我也爱你")
                     window.location.href = 'https://img2.baidu.com/it/u=3930260137,93552642&fm=253&fmt=auto&app=138&f=JPEG?w=523&h=500';
                 else if ((e || event).keyCode == 13 && document.getElementById("password").value == "我爱你")
@@ -106,7 +108,7 @@
         <button type="button" onclick="light(2)">超清图片</button>
         <br>
 
-        <label for="name">请输入你想说的:</label>
+        <label for="name">请输入你想说的（三个字或两个字）:</label>
         <div id="son">
             <input id="password" class="box" onclick="huiche()"><br>
         </div>
