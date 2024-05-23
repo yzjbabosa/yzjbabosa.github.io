@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>index</title>
-
     <style>
-
-        body {
-            background-image: url(https://github.com/yzjbabosa/yzjbabosa.github.io/blob/main/aa.jpg?raw=true);
-            background-repeat: no-repeat;
-            background-position: center center;
+        button {
+            width:auto;
+            height:auto;
         }
-
-        .snowflake {
-            position: absolute;
-            top: 0;
-            background: white;
-            height: 5px;
-            width: 5px;
-            border-radius: 50%;
-            opacity: 0.7;
-            filter: blur(1px);
-            animation: fall linear infinite;
+        body{
+            text-align:center;
         }
-
-        audio {
-            display:;
-        }
-
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-            }
+        img{
+            width:auto;
         }
     </style>
 </head>
+
 <body>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 
-    <button onclick="document.getElementById('demo').innerHTML=Date()">时间是？</button>
-    <p id="demo"></p>
-    <audio id="musicplayer" autoplay>
-        <source src="http://music.163.com/song/media/outer/url?id=1851228561.mp3" />
-    </audio>
+    <h1>爱你的pic</h1>
 
+    <p>选择一个选项吧</p>
 
-    <div id="snowflakes"></div>
     <script>
-        const snowflakesContainer = document.getElementById('snowflakes');
-        const numberOfSnowflakes = 100;
-        for (let i = 0; i < numberOfSnowflakes; i++) {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            snowflake.style.left = `${Math.random() * 100}vw`;
-            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
-            snowflake.style.animationDelay = `${Math.random() * 5}s`;
-            snowflakesContainer.appendChild(snowflake);
+        function light(sw) {
+            var pic;
+            if (sw == 0) {
+                pic = "https://pic.pngsucai.com/01/01/85/b4bf5aad9688c170.webp"
+            }
+            else if (sw == 1) {
+                pic = "https://pic.mksucai.com/00/28/48/298ae74e9e4bc311.webp"
+            }
+            else if (sw = 2) {
+                pic = "https://pic.mksucai.com/00/18/35/93c9b1c5e398673c.webp"
+            }
+            document.getElementById('myImage').src = pic;
         }
-
+        function name(aa) {
+            var aa;
+            if (aa == 我爱你) {
+                document.write("我也爱你呀！！！")
+            }
+            document.getElementById('myImage').src = pic;
+        }
     </script>
+    <script type="text/javascript">
+        loopy()
+        function loopy() {
+            var sWord = ""
+            while (sWord != "123") {//设置密码
+                sWord = prompt("输入正确密码才能登陆!")
+            }
+            alert("欢迎访问")
+        }
+    </script>
+    <img id="myImage" src="https://pic.pngsucai.com/01/01/85/b4bf5aad9688c170.webp" width="109" height="180">
 
+    <p>
+        <button type="button" onclick="light(1)">刚满18岁</button>
+        <br>
+        <button type="button" onclick="light(0)">刚满19岁</button>
+        <br>
+        <button type="button" onclick="light(2)">刚满20岁</button>
+        <br>
 
+        <label for="name">请输入你想说的:</label>
+
+        <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" />
+        <button id="myBtn" onclick="name(我爱你)">我确定。</button>
+
+    </p>
 
 </body>
 </html>
