@@ -68,12 +68,21 @@
         #li5 {
             background-image: url(sleepy.jpg);
         }
+        #li6 {
+            background-image: url(loverher.jpg);
+        }
+        #li7 {
+            background-image: url(we.jpg);
+        }
             /*点击a标签,切换大图片*/
             #li1:target,
             #li2:target,
             #li3:target,
             #li4:target,
-            #li5:target {
+            #li5:target,
+            #li6:target,
+            #li7:target,
+        {
                 display: block;
             }
         /*定位*/
@@ -99,7 +108,7 @@
                 }
 
                 .conlist li:nth-child(2) {
-                    background: #00ff00;
+                    background: deepskyblue;
                 }
 
                 .conlist li:nth-child(3) {
@@ -109,7 +118,12 @@
                 .conlist li:nth-child(4) {
                     background: #990000;
                 }
-
+                .conlist li:nth-child(5) {
+                    background: #ffd800;
+                }
+                .conlist li:nth-child(6) {
+                    background: hotpink;
+                }
                 .conlist li:last-child {
                     background: #FF6633;
                 }
@@ -146,6 +160,12 @@
 
         .a5 {
             background-image: url(sleepy.jpg);
+        }
+        .a6 {
+            background-image: url(loveher.jpg);
+        }
+        .a7 {
+            background-image: url(we.jpg);
         }
         /*设置字体样式*/
         .conlist span {
@@ -194,6 +214,8 @@
             <li id="li3"></li>
             <li id="li4"></li>
             <li id="li5"></li>
+            <li id="li6"></li>
+            <li id="li7"></li>
         </ul>
         <ul class="conlist">
             <li><a href="#li1" class="a1"></a><span>第一张</span></li>
@@ -201,6 +223,8 @@
             <li><a href="#li3" class="a3"></a><span>第三张</span></li>
             <li><a href="#li4" class="a4"></a><span>第四张</span></li>
             <li><a href="#li5" class="a5"></a><span>第五张</span></li>
+            <li><a href="#li5" class="a5"></a><span>第六张</span></li>
+            <li><a href="#li5" class="a5"></a><span>第七张</span></li>
         </ul>
 
     </div>
