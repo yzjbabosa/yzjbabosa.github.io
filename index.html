@@ -1,21 +1,56 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-CN">
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
     <style>
-       label{
-           color: pink;
-       }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            border: 0px;
+            vertical-align: middle;
+            width: 192px;
+        }
+
+        div {
+            width: 768px;
+            height: 120px;
+        }
+
+            div ul {
+                overflow: hidden;
+                background-color: pink;
+                margin: 100px auto;
+            }
+
+                div ul li {
+                    float: left;
+                    width: 192px;
+                    height: 120px;
+                    cursor: pointer;
+                }
+
+        body {
+            text-align: center;
+            background: url(images/1.jpg) no-repeat center top;
+        }
+        label {
+            color: lightskyblue;
+        }
+
         button {
             width: auto;
             height: auto;
         }
-
-        body {
-            text-align: center;
-        }
-
         img {
             width: auto;
         }
@@ -40,33 +75,41 @@
             text-align: center;
             padding-top: 5px;
             transition: 0.5s;
-            background-color: transparent;
+            background-color: lightpink;
             font-size: 2rem;
         }
 
             .box:hover {
+                background-color: hotpink;
                 transform: scale(1.5);
             }
-
-
     </style>
 </head>
-
 <body>
-
-    <h1>爱你的pic</h1>
-
-    <p>选择一个选项吧</p>
-
+    <div>
+        <ul>
+            <li><img src=fs.jpg> </li>
+            <li><img src=boom.jpg></li>
+            <li><img src=aa.jpg></li>
+            <li><img src=images/4.jpg></li>
+        </ul>
+    </div>
     <script>
-         loopy()
-         function loopy() {
-             var sWord = ""
-             while (sWord != "520") {//设置密码
-                 sWord = prompt("输入正确密码才能登陆!")
-             }
-             alert("欢迎访问")
-         }
+        loopy()
+        function loopy() {
+            var sWord = ""
+            while (sWord != "520") {//设置密码
+                sWord = prompt("输入正确密码才能登陆!")
+            }
+            alert("欢迎访问")
+        }
+
+        var img = document.querySelector('ul').querySelectorAll('img')
+        for (var i = 0; i < img.length; i++) {
+            img[i].onclick = function () {
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+        }
         function light(sw) {
             var pic;
             if (sw == 1) {
@@ -81,41 +124,24 @@
 
             document.getElementById('myImage').src = pic;
         };
-
-
-    </script>
-
-    <script>
         function huiche() {
             document.onkeydown = function (e) {
                 if ((e || event).keyCode == 13 && document.getElementById("password").value == "草泥马")
                     window.location.href = 'music.html';
                 else if ((e || event).keyCode == 13 && document.getElementById("password").value == "大傻逼")
-                    window.location.href = 'music.html';  
+                    window.location.href = 'music.html';
                 else if ((e || event).keyCode == 13 && document.getElementById("password").value == "我也爱你")
                     window.location.href = 'heart.html';
                 else if ((e || event).keyCode == 13 && document.getElementById("password").value == "我爱你")
                     window.location.href = 'heart.html';
 
             };
-            
+
         }
     </script>
-    <img id="myImage" src="https://img2.baidu.com/it/u=3735831713,3050715546&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889" width="109" height="180">
-
-    <p>
-        <button type="button" onclick="light(1)">卡通图片</button>
-        <br>
-        <button type="button" onclick="light(0)">标清图片</button>
-        <br>
-        <button type="button" onclick="light(2)">超清图片</button>
-        <br>
-
-        <label for="name">请输入杨兆基想对女朋友说的话提示（三个字或四个字）:</label>
-        <div id="son">
-            <input id="password" class="box" onclick="huiche()"><br>
-        </div>
-    </p>
-
+    <label for="name">请输入杨兆基想对女朋友说的话提示（三个字或四个字）:</label>
+    <div id="son">
+        <input id="password" class="box" onclick="huiche()"><br>
+    </div>
 </body>
 </html>
