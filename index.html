@@ -40,7 +40,7 @@
                 height: 100%;
                 background-position: center;
                 background-clip: border-box;
-                background-size:contain;
+                background-size: contain;
                 margin: 0px;
                 background-attachment: fixed;
             }
@@ -76,7 +76,7 @@
         #li7 {
             background-image: url(we.jpg);
         }
-        
+
             /*点击a标签,切换大图片*/
             #li1:target,
             #li2:target,
@@ -84,8 +84,7 @@
             #li4:target,
             #li5:target,
             #li6:target,
-            #li7:target
-            {
+            #li7:target {
                 display: block;
                 background-attachment: fixed;
             }
@@ -176,7 +175,7 @@
         .a7 {
             background-image: url(we.jpg);
         }
-       
+
         /*设置字体样式*/
         .conlist span {
             line-height: 150px;
@@ -213,10 +212,22 @@
             text-align: center;
             color: deepskyblue;
         }
+       .time span {
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+        p {
+            color: rgb();
+            text-align: center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+        }
     </style>
 </head>
 
 <body>
+    <p id="dateAndTime"></p>
     <div class="box">
         <ul class="content">
             <li id="li1"></li>
@@ -226,7 +237,7 @@
             <li id="li5"></li>
             <li id="li6"></li>
             <li id="li7"></li>
-           
+
         </ul>
         <ul class="conlist">
             <li><a href="#li1" class="a1"></a><span>第一张</span></li>
@@ -236,7 +247,7 @@
             <li><a href="#li5" class="a5"></a><span>第五张</span></li>
             <li><a href="#li6" class="a6"></a><span>第六张</span></li>
             <li><a href="#li7" class="a7"></a><span>第七张</span></li>
-           
+
         </ul>
 
     </div>
@@ -260,13 +271,18 @@
 
         }
         loopy()
-        function loopy() {
+         function loopy() {
             var sWord = ""
             while (sWord != "5200") {//设置密码
                 sWord = prompt("输入正确密码才能登陆!")
             }
             alert("欢迎访问")
         }
+        var dateAndTime = document.getElementById('dateAndTime');
+
+        var currentTime = new Date();
+
+        dateAndTime.innerHTML = currentTime;
     </script>
 </body>
 
