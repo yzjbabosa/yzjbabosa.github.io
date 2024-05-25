@@ -193,7 +193,7 @@
         }
 
         .box2 {
-            width: 800px;
+            width: 850px;
             height: 40px;
             display: inline-block;
             text-align: center;
@@ -252,19 +252,28 @@
 
     </div>
     <div id="son">
-        <input id="password" class="box2" onclick="huiche()" placeholder="请输入杨兆基想对女朋友说的话提示（三个字或四个字）:"><br>
+        <input id="password" class="box2" onclick="huiche()" placeholder="请输入杨兆基想对女朋友说的话提示（三个字或四个字）:" list="selectlist">
+        <datalist id="selectlist">
+            <option>我爱你</option>
+            <option>我也爱你</option>
+            <option>在干嘛？</option>
+            <option>不要生气了嘛</option>
+            <option>大傻逼</option>
+        </datalist>
     </div>
 
     <script>
         function huiche() {
             document.onkeydown = function (e) {
-                if ((e || event).keyCode == 13 && document.getElementById("password").value == "草泥马")
+                if ((e || event).keyCode == 13 && document.getElementById("password").value == "不要生气了嘛")
                     window.location.href = 'music.html';
                 else if ((e || event).keyCode == 13 && document.getElementById("password").value == "大傻逼")
                     window.location.href = 'music.html';
                 else if ((e || event).keyCode == 13 && document.getElementById("password").value == "我也爱你")
-                    window.location.href = 'heart.html';
+                    window.location.href = 'bb.html';
                 else if ((e || event).keyCode == 13 && document.getElementById("password").value == "我爱你")
+                    window.location.href = 'heart.html';
+                else if ((e || event).keyCode == 13 && document.getElementById("password").value == "在干嘛？")
                     window.location.href = 'heart.html';
 
             };
