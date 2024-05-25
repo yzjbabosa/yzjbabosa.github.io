@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <title>music</title>
     <style>
-        a{
+        div{
             color:red;
             text-align:center;
         }
     </style>
 </head>
 <body>
-<a>禁止亮通哥行为</a>
+    <div>
+<a>我又惹你生气了吗？</a>
+<a2>对不起，</a2>
+<a3>我不知道我在干嘛</a3>
+<a4>你可以试着打个微信电话给我</a4>
+<a5>我真的很爱你</a5>
+<a6>2024.5.25 23:45</a6>
+    </div>
+<audio src="kannong.mp3" id="dd" autoplay="autoplay" controls="controls" loop="loop"></audio>
+<button onclick="dt()">停止播放</button>
+<button onclick="st()">开始播放</button>
+<button onclick="rs()">重置播放</button>
+	
+<script type="text/javascript">
+	function dt(){
+		var dd = document.getElementById("dd")
+		dd.pause()
+	}
+	function st(){
+		var dd = document.getElementById("dd")
+		dd.play()
+	}
+	function rs(){
+		var dd = document.getElementById("dd")
+		dd.load()
+	}
+</script>
+
 </body>
 </html>
